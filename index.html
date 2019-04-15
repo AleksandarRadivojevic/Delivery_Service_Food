@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Delivery Service FOOD | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="assets/images/Icon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div id="wrapp">
+        <!--navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">Delivery Service FOOD</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <img src="assets/images/basket.png" alt="basket" height="30" width="30" style="margin-right:10px"
+                        onclick="displayModalStart('displayModal','display: block;')" id="iconBasket">
+                    <select name="category" id="category" class="form-control" onchange="filterArticles()">
+                        <option value="null">All Categories</option>
+                    </select>
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+                        id="inputFilter" onchange="filterArticles()">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="button"
+                        onclick="filterArticles()">Search</button>
+                    <a class="nav-link" href="login.html">Login</a>
+                </form>
+            </div>
+        </nav>
+        <!--total sum-->
+        <h3 style="margin-top:10px">Total Sum: <span id="result">0</span></h3>
+        <div class="alert alert-danger" role="alert" id="faultMsg">
+            A simple danger alert—check it out!
+        </div>
+        <!--dinamic create elements-->
+        <div id="container"></div>
+        <!--progress bar loader-->
+        <img src="assets/images/loader.gif" alt="loader.gif" id="loader">
+        <!--Modal for basket-->
+        <div id="displayModal">
+            <div class="modalBackground">
+                <div id="modal">
+                    <div class="icon">
+                        <span class="glyphicon glyphicon-thumbs-down"
+                            onclick="closeModal('displayModal','display: none;')">X</span>
+                    </div><br>
+                    <h2>Basket</h2>
+                    <ul id="listBasket">
+                        <li>dsfsdf</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+</body>
+
+</html>
