@@ -42,6 +42,15 @@
     cursor: pointer;
     color: silver
 }
+.shippingDetails {
+  width: 85%;
+  margin: auto;
+  margin-top: 10px
+}
+#confirmMsg {
+  margin-top: 50px
+}
+
 /*modal*/
 #displayModal{
     display: none;
